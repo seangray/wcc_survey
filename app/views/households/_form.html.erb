@@ -1,0 +1,81 @@
+<%= semantic_form_for @household do |form| %>
+
+  <% if @household.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@household.errors.count, "error") %> prohibited this household from being saved:</h2>
+
+      <ul>
+      <% @household.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.inputs do %>
+	
+</ol>
+		<h4>Age: list the total number of members in each age group that are in your household including yourself:</h4>
+    
+		<div><ul class='double'>
+		<%= form.input :age_0_5, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :age_6_18, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :age_19_34, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :age_35_49, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :age_50_64, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :age_65_74, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :age_75_plus, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+		</ul>
+	</div>
+		<div class="clear"></div>
+		
+		<h4>Education of adults in your household, list all adult members in your household including yourself:</h4>
+		<ul class='double'>
+    <%= form.input :did_not_complete_high_school, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :high_school_graduate, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :some_college, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :college_graduate, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :graduate_school, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+	</ul>
+		<div class="clear"></div>
+	
+		<h4>Family units, check one:</h4>
+ <ul class='double'>
+    <%= form.input :family_unit, :as => :select, :include_blank => false, :collection => Household::FAMILY_UNITS %>
+	</ul>
+
+		<div class="clear"></div>
+
+			
+	
+		<h4>What is the occupation of each adult in your household: 	</h4>
+<ul class='double'>
+    <%= form.input :occupation_business, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :occupation_clerical, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :occupation_farmer, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :occupation_laborer, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :occupation_professional, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :occupation_student, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :occupation_tradesperson, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :occupation_other, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+	</ul>
+
+		<div class="clear"></div>
+
+		<h4>What is the current employment information of each adult in your household	</h4>
+		<ul class='double'>
+    <%= form.input :employed, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :not_employed, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+    <%= form.input :retired, :as => :select, :include_blank => false, :collection => Household::AGE_LIST %>
+	</ul>
+
+		<div class="clear"></div>
+		
+	
+    <%= form.actions do %>
+      <%= form.submit "SAVE FAMILY SURVEY", :id => "input_submit_submit" %>
+    <% end %>
+  <% end %>
+<% end %>
+
+

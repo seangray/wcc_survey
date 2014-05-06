@@ -1,0 +1,169 @@
+<h1>Listing individuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fellowship is warm and personal</th>
+      <th>Worship is alive and compelling</th>
+      <th>Is very dedicated to christ</th>
+      <th>Is knowledgeable about the bible</th>
+      <th>Has an effective and innovative education program </th>
+      <th>Has forthright and clear evangelism</th>
+      <th>Stewardship is generous and self sacrificing</th>
+      <th>Community service is active and concerned</th>
+      <th>Is invested in our youth</th>
+      <th>Is cooperative and trusting</th>
+      <th>Internal communication is open and clear</th>
+      <th>Has well focused clear goals</th>
+      <th>Describe the strengths</th>
+      <th>What attracts you</th>
+      <th>Most important thing new minister brings</th>
+      <th>Most important need</th>
+      <th>Calling our church to do</th>
+      <th>Style and content of preaching</th>
+      <th>Distinctive attributes about westbrook</th>
+      <th>Major trends in westbrook</th>
+      <th>Problem areas confronting westbrook</th>
+      <th>Major trends in church</th>
+      <th>Important faith experiences</th>
+      <th>Most challenging faith experience</th>
+      <th>Effective preacher speaker</th>
+      <th>Continues to develop</th>
+      <th>Helps people develop</th>
+      <th>Helps people work together</th>
+      <th>Effective planning leading worship</th>
+      <th>Sense of the direction</th>
+      <th>Participate in ucc activities</th>
+      <th>Helps people understand social justice</th>
+      <th>Is a helpful counselor</th>
+      <th>Ministers in crisis situations</th>
+      <th>Pastoral calls to home bound</th>
+      <th>Pastoral calls not home bound</th>
+      <th>Good leader</th>
+      <th>Effective working with children</th>
+      <th>Builds fellowship at works</th>
+      <th>Helps people develop leadership</th>
+      <th>Effective administrator</th>
+      <th>Effective with committees and officers</th>
+      <th>Effective teacher</th>
+      <th>Strong commitment to the education</th>
+      <th>Effective working with adults</th>
+      <th>Inspires a sense of confidence</th>
+      <th>Works regularly at bringing new members</th>
+      <th>Encourages support of wider mission</th>
+      <th>Reaches out to inactive members</th>
+      <th>Works in the development of stewardship</th>
+      <th>Active in ecumenical relationships</th>
+      <th>A person of faith</th>
+      <th>Writes clearly and well</th>
+      <th>Works well on a team</th>
+      <th>Is effective in working with youth</th>
+      <th>Organizes people for community action </th>
+      <th>Is skilled in planning and leading programs</th>
+      <th>Plans and leads well organized meetings</th>
+      <th>Encourages to relate faith to daily lives</th>
+      <th>Is accepting of people with divergent views</th>
+      <th>Encourages others</th>
+      <th>Mature and emotionally secure</th>
+      <th>Has strong commitment and loyalty </th>
+      <th>Maintains confidentially</th>
+      <th>Understands from a global perspective </th>
+      <th>Compassionate and caring person </th>
+      <th>Deals effectively with conflict</th>
+      <th>Quality other 44</th>
+      <th>Quality other 44</th>
+      <th>Your name</th>
+      <th>May we contact</th>
+      <th>Phone number</th>
+      <th>Other comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @individuals.each do |individual| %>
+      <tr>
+        <td><%= individual.fellowship_is_warm_and_personal %></td>
+        <td><%= individual.worship_is_alive_and_compelling %></td>
+        <td><%= individual.is_very_dedicated_to_Christ %></td>
+        <td><%= individual.is_knowledgeable_about_the_Bible %></td>
+        <td><%= individual.has_an_effective_and_innovative_education_program_ %></td>
+        <td><%= individual.has_forthright_and_clear_evangelism %></td>
+        <td><%= individual.stewardship_is_generous_and_self_sacrificing %></td>
+        <td><%= individual.community_service_is_active_and_concerned %></td>
+        <td><%= individual.is_invested_in_our_youth %></td>
+        <td><%= individual.is_cooperative_and_trusting %></td>
+        <td><%= individual.internal_communication_is_open_and_clear %></td>
+        <td><%= individual.has_well_focused_clear_goals %></td>
+        <td><%= individual.describe_the_strengths %></td>
+        <td><%= individual.what_attracts_you %></td>
+        <td><%= individual.most_important_thing_new_minister_brings %></td>
+        <td><%= individual.most_important_need %></td>
+        <td><%= individual.calling_our_church_to_do %></td>
+        <td><%= individual.style_and_content_of_preaching %></td>
+        <td><%= individual.distinctive_attributes_about_westbrook %></td>
+        <td><%= individual.major_trends_in_westbrook %></td>
+        <td><%= individual.problem_areas_confronting_westbrook %></td>
+        <td><%= individual.major_trends_in_church %></td>
+        <td><%= individual.important_faith_experiences %></td>
+        <td><%= individual.most_challenging_faith_experience %></td>
+        <td><%= individual.effective_preacher_speaker %></td>
+        <td><%= individual.continues_to_develop %></td>
+        <td><%= individual.helps_people_develop %></td>
+        <td><%= individual.helps_people_work_together %></td>
+        <td><%= individual.effective_planning_leading_worship %></td>
+        <td><%= individual.sense_of_the_direction %></td>
+        <td><%= individual.participate_in_ucc_activities %></td>
+        <td><%= individual.helps_people_understand_social_justice %></td>
+        <td><%= individual.is_a_helpful_counselor %></td>
+        <td><%= individual.ministers_in_crisis_situations %></td>
+        <td><%= individual.pastoral_calls_to_home_bound %></td>
+        <td><%= individual.pastoral_calls_not_home_bound %></td>
+        <td><%= individual.good_leader %></td>
+        <td><%= individual.effective_working_with_children %></td>
+        <td><%= individual.builds_fellowship_at_works %></td>
+        <td><%= individual.helps_people_develop_leadership %></td>
+        <td><%= individual.effective_administrator %></td>
+        <td><%= individual.effective_with_committees_and_officers %></td>
+        <td><%= individual.effective_teacher %></td>
+        <td><%= individual.strong_commitment_to_the_education %></td>
+        <td><%= individual.effective_working_with_adults %></td>
+        <td><%= individual.inspires_a_sense_of_confidence %></td>
+        <td><%= individual.works_regularly_at_bringing_new_members %></td>
+        <td><%= individual.encourages_support_of_wider_mission %></td>
+        <td><%= individual.reaches_out_to_inactive_members %></td>
+        <td><%= individual.works_in_the_development_of_stewardship %></td>
+        <td><%= individual.active_in_ecumenical_relationships %></td>
+        <td><%= individual.a_person_of_faith %></td>
+        <td><%= individual.writes_clearly_and_well %></td>
+        <td><%= individual.works_well_on_a_team %></td>
+        <td><%= individual.is_effective_in_working_with_youth %></td>
+        <td><%= individual.organizes_people_for_community_action_ %></td>
+        <td><%= individual.is_skilled_in_planning_and_leading_programs %></td>
+        <td><%= individual.plans_and_leads_well_organized_meetings %></td>
+        <td><%= individual.encourages_to_relate_faith_to_daily_lives %></td>
+        <td><%= individual.is_accepting_of_people_with_divergent_views %></td>
+        <td><%= individual.encourages_others %></td>
+        <td><%= individual.mature_and_emotionally_secure %></td>
+        <td><%= individual.has_strong_commitment_and_loyalty_ %></td>
+        <td><%= individual.maintains_confidentially %></td>
+        <td><%= individual.understands_from_a_global_perspective_ %></td>
+        <td><%= individual.compassionate_and_caring_person_ %></td>
+        <td><%= individual.deals_effectively_with_conflict %></td>
+        <td><%= individual.quality_other_44 %></td>
+        <td><%= individual.quality_other_44 %></td>
+        <td><%= individual.your_name %></td>
+        <td><%= individual.may_we_contact %></td>
+        <td><%= individual.phone_number %></td>
+        <td><%= individual.other_comments %></td>
+        <td><%= link_to 'Show', individual %></td>
+        <td><%= link_to 'Edit', edit_individual_path(individual) %></td>
+        <td><%= link_to 'Destroy', individual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Individual', new_individual_path %>

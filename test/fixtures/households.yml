@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age_0_5: 1
+  age_6_18: 1
+  age_19_34: 1
+  age_35_49: 1
+  age_50_64: 1
+  age_65_74: 1
+  age_75_plus: 1
+  did_not_complete_high_school: 1
+  high_school_graduate: 1
+  some_college: 1
+  college_graduate: 1
+  graduate_school: 1
+  family_unit: MyString
+  occupation_business: 1
+  occupation_clerical: 1
+  occupation_farmer: 1
+  occupation_laborer: 1
+  occupation_professional: 1
+  occupation_student: 1
+  occupation_tradesperson: 1
+  occupation_other: 1
+  employed: 1
+  not_employed: 1
+  retired: 1
+
+two:
+  age_0_5: 1
+  age_6_18: 1
+  age_19_34: 1
+  age_35_49: 1
+  age_50_64: 1
+  age_65_74: 1
+  age_75_plus: 1
+  did_not_complete_high_school: 1
+  high_school_graduate: 1
+  some_college: 1
+  college_graduate: 1
+  graduate_school: 1
+  family_unit: MyString
+  occupation_business: 1
+  occupation_clerical: 1
+  occupation_farmer: 1
+  occupation_laborer: 1
+  occupation_professional: 1
+  occupation_student: 1
+  occupation_tradesperson: 1
+  occupation_other: 1
+  employed: 1
+  not_employed: 1
+  retired: 1

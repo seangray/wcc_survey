@@ -1,0 +1,52 @@
+<h1>Household Survey Tallies</h1>
+
+
+<p><%= link_to 'Add Another Household Survey Response', new_household_path %></p>
+<br>
+
+<h4>Based on <%= @households.count %> household responses:</h4>
+<table border=1>
+  <thead>
+    <tr>
+      <th>Response</th>
+      <th>Church Total</th>
+      <th>Number of Households with This</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% 
+		aggregrate = {}
+		respondants = {}
+		@households.each do |household| 
+			household.attributes.each do |key, value|
+				if key!='id' && !key.blank? && aggregrate[key] && value.is_a?(Integer) && value>0
+					aggregrate[key] += value 
+					respondants[key] += 1 
+				elsif key!='id' && !key.blank? && value.is_a?(Integer) && value>0
+					aggregrate[key] = value 
+					respondants[key] = 1 
+				elsif key=='family_unit' && aggregrate[value] && !value.blank?
+					aggregrate[value] += 1
+					respondants[value] += 1 
+				elsif key=='family_unit' && !value.blank?
+					aggregrate[value] = 1
+					respondants[value] = 1 
+				end
+			end
+		end
+		%>
+		
+		<% aggregrate.each do |key, value| %>
+		<tr>
+			<th align='right'><%= key %></th>
+			<td align='center'><%= value %></td>
+			<td align='center'><%= respondants[key] %></td>
+		</tr>
+		<% end %>
+  </tbody>
+</table>
+
+<br>
+
+<p><%= link_to 'Add Another Household Survey Response', new_household_path %></p>

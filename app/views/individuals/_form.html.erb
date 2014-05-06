@@ -1,0 +1,123 @@
+<%= semantic_form_for @individual do |form| %>
+
+  <% if @individual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@individual.errors.count, "error") %> prohibited this household from being saved:</h2>
+
+      <ul>
+      <% @individual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.inputs do %>
+	
+		<h4>How true are these statements?</h4>
+    
+		<%= form.input :fellowship_is_warm_and_personal, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :worship_is_alive_and_compelling, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :is_very_dedicated_to_Christ, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :is_knowledgeable_about_the_Bible, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :has_an_effective_and_innovative_education_program_, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :has_forthright_and_clear_evangelism, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :stewardship_is_generous_and_self_sacrificing, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+
+    <%= form.input :community_service_is_active_and_concerned, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :is_invested_in_our_youth, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :is_cooperative_and_trusting, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :internal_communication_is_open_and_clear, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+    <%= form.input :has_well_focused_clear_goals, :as => :radio, :include_blank => false, :collection => Individual::HOW_TRUE %>
+	
+	<h4>Part 2.  Tell us what you’re looking for from our church</h4>
+	
+	<%= form.input :describe_the_strengths %>
+	<%= form.input :what_attracts_you %>
+	<%= form.input :most_important_thing_new_minister_brings %>
+	<%= form.input :most_important_need %>
+	<%= form.input :calling_our_church_to_do %>
+	<%= form.input :style_and_content_of_preaching %>
+
+
+	<h4>Part 3.  Help us describe our church and community</h4>
+
+	<%= form.input :distinctive_attributes_about_westbrook %>
+	<%= form.input :major_trends_in_westbrook %>
+	<%= form.input :problem_areas_confronting_westbrook %>
+	<%= form.input :major_trends_in_church %>
+	<%= form.input :important_faith_experiences %>
+	<%= form.input :most_challenging_faith_experience %>
+
+
+	<h4>Part 4.  Leadership expectations</h4>
+</ol>
+<ul class='triple'>
+<%= form.input :effective_preacher_speaker %>
+<%= form.input :continues_to_develop %>
+<%= form.input :helps_people_develop %>
+<%= form.input :helps_people_work_together %>
+<%= form.input :effective_planning_leading_worship %>
+<%= form.input :sense_of_the_direction %>
+<%= form.input :participate_in_ucc_activities %>
+<%= form.input :helps_people_understand_social_justice %>
+<%= form.input :is_a_helpful_counselor %>
+<%= form.input :ministers_in_crisis_situations %>
+<%= form.input :pastoral_calls_to_home_bound %>
+<%= form.input :pastoral_calls_not_home_bound %>
+<%= form.input :good_leader %>
+<%= form.input :effective_working_with_children %>
+<%= form.input :builds_fellowship_at_works %>
+<%= form.input :helps_people_develop_leadership %>
+<%= form.input :effective_administrator %>
+<%= form.input :effective_with_committees_and_officers %>
+<%= form.input :effective_teacher %>
+<%= form.input :strong_commitment_to_the_education %>
+<%= form.input :effective_working_with_adults %>
+<%= form.input :inspires_a_sense_of_confidence %>
+<%= form.input :works_regularly_at_bringing_new_members %>
+<%= form.input :encourages_support_of_wider_mission %>
+<%= form.input :reaches_out_to_inactive_members %>
+<%= form.input :works_in_the_development_of_stewardship %>
+<%= form.input :active_in_ecumenical_relationships %>
+<%= form.input :a_person_of_faith %>
+<%= form.input :writes_clearly_and_well %>
+<%= form.input :works_well_on_a_team %>
+<%= form.input :is_effective_in_working_with_youth %>
+<%= form.input :organizes_people_for_community_action_ %>
+<%= form.input :is_skilled_in_planning_and_leading_programs %>
+<%= form.input :plans_and_leads_well_organized_meetings %>
+<%= form.input :encourages_to_relate_faith_to_daily_lives %>
+<%= form.input :is_accepting_of_people_with_divergent_views %>
+<%= form.input :encourages_others %>
+<%= form.input :mature_and_emotionally_secure %>
+<%= form.input :has_strong_commitment_and_loyalty_ %>
+<%= form.input :maintains_confidentially %>
+<%= form.input :understands_from_a_global_perspective_ %>
+<%= form.input :compassionate_and_caring_person_ %>
+<%= form.input :deals_effectively_with_conflict %>
+
+	</ul>
+
+		<div class="clear"></div>
+
+<ol>
+	
+<%= form.input :quality_other_44 %>
+<%= form.input :quality_other_45 %>
+
+	<h4>Part 5.  Final input</h4>
+
+	<%= form.input :your_name %>
+	<%= form.input :may_we_contact %>
+	<%= form.input :phone_number %>
+	<%= form.input :other_comments %>
+	
+    <%= form.actions do %>
+      <%= form.submit "SAVE INDIVIDUAL SURVEY", :id => "input_submit_submit" %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
